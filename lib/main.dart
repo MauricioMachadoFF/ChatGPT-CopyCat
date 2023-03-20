@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:open_ai_copy_cat/main_feature/main_page.dart';
+import 'package:open_ai_copy_cat/core/injection.dart';
+import 'package:open_ai_copy_cat/main_feature/presentation/main_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependecies();
   runApp(const MyApp());
 }
 
