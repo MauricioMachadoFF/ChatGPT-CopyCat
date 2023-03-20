@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:open_ai_copy_cat/design_system/colors.dart';
 import 'package:open_ai_copy_cat/design_system/sizes.dart';
-import 'package:open_ai_copy_cat/main_feature/widgets/demo_container.dart';
-import 'package:open_ai_copy_cat/main_feature/widgets/menu_side_bar.dart';
-import 'package:open_ai_copy_cat/main_feature/widgets/subscribe_modal.dart';
+import 'package:open_ai_copy_cat/main_feature/presentation/widgets/demo_container.dart';
+import 'package:open_ai_copy_cat/main_feature/presentation/widgets/menu_side_bar.dart';
+import 'package:open_ai_copy_cat/main_feature/presentation/widgets/subscribe_modal.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
