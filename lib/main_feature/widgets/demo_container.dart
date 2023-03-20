@@ -3,7 +3,14 @@ import 'package:open_ai_copy_cat/design_system/colors.dart';
 import 'package:open_ai_copy_cat/design_system/sizes.dart';
 
 class DemoContainer extends StatelessWidget {
-  const DemoContainer({super.key});
+  const DemoContainer({
+    super.key,
+    required this.options,
+    required this.onPressed,
+  });
+
+  final List<String> options;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -11,57 +18,55 @@ class DemoContainer extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: context.width * 0.0265,
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Example of types of question to ask RealAssist",
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w700,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Example of types of question to ask RealAssist",
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          SizedBox(height: context.height * 0.04),
+          Row(
+            children: [
+              Expanded(
+                child: _Card(
+                  options[0],
+                  onTap: onPressed,
+                ),
               ),
-            ),
-            SizedBox(height: context.height * 0.04),
-            Row(
-              children: [
-                Expanded(
-                  child: _Card(
-                    "Creating blog content specific to real estate",
-                    onTap: () {},
-                  ),
+              SizedBox(width: context.width * 0.0265),
+              Expanded(
+                child: _Card(
+                  options[1],
+                  onTap: onPressed,
                 ),
-                SizedBox(width: context.width * 0.0265),
-                Expanded(
-                  child: _Card(
-                    "Creating blog content specific to real estate",
-                    onTap: () {},
-                  ),
+              ),
+            ],
+          ),
+          SizedBox(height: context.height * 0.025),
+          Row(
+            children: [
+              Expanded(
+                child: _Card(
+                  options[2],
+                  onTap: onPressed,
                 ),
-              ],
-            ),
-            SizedBox(height: context.height * 0.025),
-            Row(
-              children: [
-                Expanded(
-                  child: _Card(
-                    "Creating blog content specific to real estate",
-                    onTap: () {},
-                  ),
+              ),
+              SizedBox(width: context.width * 0.0265),
+              Expanded(
+                child: _Card(
+                  options[3],
+                  onTap: onPressed,
                 ),
-                SizedBox(width: context.width * 0.0265),
-                Expanded(
-                  child: _Card(
-                    "Creating blog content specific to real estate",
-                    onTap: () {},
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
