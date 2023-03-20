@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'completion_body_request_model.g.dart';
+part 'completion_body_response_model.g.dart';
 
 @JsonSerializable()
 class CompletionsResponseModel {
